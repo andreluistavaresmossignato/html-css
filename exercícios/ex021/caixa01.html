@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <!-- Usando o DevTools -->
+    <style>
+        h1{/* Box-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            border: 10px solid darkslategray;
+
+            
+            margin: 20px auto 40px auto;
+            /* Usamos o sentido relógio top right bottom left, usando shorthand */
+
+            padding: 10px;/* Já que todos os valores são 10px, é necessário colocar apenas uma vez */
+
+            /* DICA: USE O margin:auto PARA CENTRALIZAR UMA CAIXA QUE NÃO SEJA TEXTO! */
+
+            outline: 5px dashed salmon; /* Tracejado dentro da margem */
+
+        }/* Veja o tamanho da caixa do h1 agora usando o F12 e usando o DevTools */
+
+        a{/* Inline-level */
+            border-width: 10px;
+            border-style: solid;
+            border-color: red; /* A cor da borda facilita a visualização dos elementos no DevTools */
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="caixa02.html">links são exemplos de caixas inline-level</a>.Vamos ver como tudo isso funciona</p>
+    
+</body>
+</html>

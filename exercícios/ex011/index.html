@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+        <!-- OBS: CUIDADO COM DIREITOS AUTORAIS! -->
+<body>
+
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture><!-- Comando para habilitar as imagens dinâmicas -->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+
+        <!-- o <source> regula e mostra um tipo de imagem (feita na gimp) dependendo do tamanho da tela, se as telas não corresponderem ao source, ela carrega o img abaixo-->
+
+        <img src="imagens/foto-g.png" alt="Imagem flexisível">
+    </picture>
+
+    <!-- CUIDADO: NÃO INVERTA O SOURCES, se não da errado! -->
+
+    <h1>Reproduzindo audio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+
+    <audio src="mídia/All My Relations - Ryan McCaffrey_Go By Ocean.mp3" controls autoplay></audio>
+
+    <audio preload="metadata" autoplay controls loop><!-- Não recomendado o preload auto, por prejudicar usuários de celular por causa do peso do arquivo -->
+        <source src="mídia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="mídia/guanacast-33.ogg" type="audio/ogg">
+        <source src="mídia/guanacast-33.wav" type="audio/wav"><!-- wav é muito pesado (não recomendado)-->
+        <!-- Caso o navegador não der suporte a MP3, ele vai tentar OGG, e caso não der também, ele tenta carregar .wav-->
+
+        <p>Infelizamente seu navegador não consegue reproduzir áudio <a href="mídia/guanacast-33.mp3">Clique aqui para baixar o arquivo</a></p><!-- Caso nenhum dos 3 arquivos for compatível, ele te leva para esse <p>-->
+    </audio>
+
+    <!-- OBS: primeiro audio obtido no youtube studio -> biblioteca de áudio -->
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo esta hospedado no meu própio servidor</p>
+
+    <!--<video src="mídia/meu-video.mp4" width="500" controls></video>--> 
+
+    <!-- Mesmo esquema de colocar audios -->
+    <video controls width="500" poster="imagens/tumb.jpg" loop> <!-- poster serve para colocar uma tumbnail no video -->
+
+        <source src="mídia/meu-video.mp4" type="video/mp4">
+        <!--<source src="mídia/meu-video.mkv" type="video/m">--> <!-- MKV não é suportado pelo HTML5 -->
+        <source src="mídia/meu-video.webm" type="video/webm">
+
+
+        <!-- A ordem dos sources tem que começar do mais leve pro mais pesado -->
+
+        <!-- Caso nenhum source der certo-->
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+
+    </video>
+
+    <!-- ATENÇÃO: RECOMENDADO PELO MENOS 3 TIPOS DE ARQUIVO (3 sources) PARA INCLUSÃO DE NAVEGADORES -->
+     <!-- Usar vídeos internos tem o problema de muito tráfego de dados, que pode PREJUDICAR O DESEMPENHO DO SEU SITE, mas existe uma SOLUÇÃO ABAIXO -->
+
+     <h1>Inserindo vídeos do Youtube</h1>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/LW0bhKitRBk?si=3QnP6ZHC3Mt2BWKS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+     <h1>Inserindo vídeos do Vimeo</h1>
+     <iframe src="https://player.vimeo.com/video/946821430?h=799cb773da&loop=1&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+     <!-- O vimeo é mais fluido, e não mostra outros videos recomendados igual o Youtube, além de evitar pirataria do seu video  (porem ele é pago caso precisar usar para uso profissional)-->
+    
+</body>
+
+<!-- Lista de tipos de vídeos: 
+    1- MP4 - mp4
+    2- OGV - ogg
+    3- M4V - mp4
+    4- WEBM - webm
+    OBS: A ordem vai depender do tamanho de cada arquivo (do mais leve para o mais pesado)
+-->
+
+</html>

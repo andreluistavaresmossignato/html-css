@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav{
+            background-color: rgb(103, 103, 103);
+            padding: 3px;
+            box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.315); /* Deslocamento horizontal, Deslocamento vertical, Espalhamento e Sombra*/
+
+            /* DICA: USE O DEVTOOLS PARA FAZER O SOMBREAMENTO */
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover{
+            text-decoration: underline;
+            font-size: 20px;
+        }
+
+        main{
+            background-color: lightgray;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px; /* Pode selecionar um por um usando o modelo relógio para arrendondar borda por borda */
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+        }
+
+        article{
+            background-color: lightgray;
+        }
+
+        article > aside{
+            background-color: rgb(165, 165, 165);
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            margin: 0px;
+        }
+
+        footer > p{
+            margin: 0px;
+        }
+
+        #assuntos{
+            background-color: white;
+            padding: 10px 0px 10px 5px;
+        }
+
+        div#bola{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }/* É possível fazer uma bola usando border-radius */
+
+        /* Fica um conteúdo muito mais organizado usando tags semânticas */
+    </style>
+</head>
+<body>
+    <!-- São divs semânticas -->
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="caixa01.html">Link</a>
+            <a href="caixa01.html">Link</a>
+            <a href="caixa01.html">Link</a>
+            <a href="caixa01.html">Link</a>
+            <a href="caixa01.html">Link</a>
+            <!-- Caso não tiver link para colocar no href, coloque # -->
+        </nav>
+
+    </header>
+    <main>
+
+        <section id="assuntos">
+
+            <p>Esportes, Política e Tecnologia</p>
+
+        </section>
+        <section id="noticias">
+
+            <h1>Notícia sobre o Brasil</h1>
+
+        </section>
+        <article>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veritatis sint quas quaerat a, provident ea ab, eveniet odit reiciendis corporis cum exercitationem adipisci facere! Animi totam fugit quisquam aut.</p>
+
+            <aside>
+                <p>Artigo escrito por Cleitin do grau</p>
+            </aside>
+
+        </article>
+        <article>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde ab, dolorum dolorem possimus perferendis et iusto! Id, reiciendis quisquam. Saepe doloremque deserunt quas cupiditate magnam quos iste accusantium illo?</p>
+
+        </article>
+
+    </main>
+    <footer>
+
+        <p>Desenvolvido pelo André</p>
+
+    </footer>
+
+    <div id="bola"></div>
+    
+</body>
+</html>
