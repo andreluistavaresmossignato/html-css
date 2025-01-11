@@ -7,15 +7,21 @@
     <style>
 
         body{
-            height: 100vh; /* Ideal para combinar com o cover abaixo, exibindo 100% da tela */
-            background-color: black;
-            background-image: url('imagens/wallpaper002.jpg');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed; /* Ideal para mostrar na tela toda (explicação abaixo do body) */
+            height: 100vh;
 
-            /* shorthand no FUNDO006(2)*/
+            /* SHORTHAND - BACKGROUND
+            
+            color -> image -> position -> repeat -> [size] -> attachment
+
+            ATENÇÃO: apesar da teoria ser assim, se colocar desse jeito, a imagem some, porque o size e a imagem causam aflito, é necessario colocar o size SEPARADO
+            
+            */
+
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
+
+
+
         }
 
         main{
