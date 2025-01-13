@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <!-- Cabeçalho fixo -->
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
+        thead, tfoot{
+            background-color: rgb(52, 51, 51);
+            color: white;
+        }
+
+        /* Cabeçalho fixo, OBS: NÃO FUNCIONA EM TODOS OS NAVEGADORES! */
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(52, 51, 51);
+        }
+
+        tbody tr:nth-child(odd){ 
+            background-color: lightgray;
+        }
+
+        tbody tr:nth-child(even){
+            background-color: white;
+        }
+
+        td.num{
+            text-align: right;
+        }
+        
+        /*
+        TIPOS DE NTH-CHILD()
+        1- Por númeração - coloca o número + n, isso faz pular de quantos números você quiser 
+        EX: 2n
+        
+        2- ODD - Todas as células ímpares com essa configuração
+        OU: 2n - 1
+        
+        3- EVEN - Todas as células pares com essa configuração
+        OU: 2n
+        */
+    </style>
+</head>
+<body>
+
+    <h1>Uso de tabelas grandes</h1>
+
+    <table>
+        <caption>População das Unidades Federativas</caption> <!-- Legenda -->
+        <thead> <!-- Cabeça da tabela -->
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+
+        <tbody> <!-- Corpo da tabela -->
+            <tr>
+                <td>Sâo Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 850 513</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 824 665</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 229 915</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 539 029</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 233 656</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 664 306</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">8 058 447</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 350 483</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7 010 960</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4 281 209</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 145 040</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 102 129</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 836 399</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 446 071</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 375 646</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 220 104</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2 982 815</td>
+            </tr>
+            
+
+        </tbody>
+
+        <tfoot> <!-- Pé da tabela -->
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>212.583.750</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+
+    <!-- Quando acaba a tabela, o cabeçalho fixo não aparece nos parágrafos, o que é ótimo -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit voluptates ipsum, reiciendis quibusdam consequatur fugit accusantium ratione iusto! Nulla id sequi laudantium quas est minus necessitatibus, aperiam officiis recusandae vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequatur ipsam soluta dicta laboriosam et sit iste impedit mollitia commodi esse, officiis similique! Repudiandae suscipit doloribus veniam nam, alias blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, illo quis id vel voluptates aliquam voluptatibus vitae dolore nostrum distinctio. Ullam ipsa asperiores, corrupti maiores reprehenderit vitae deserunt id quis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente praesentium ea voluptatem labore facere tenetur qui, illo id unde saepe neque, perferendis nam excepturi, omnis ratione dolore doloremque quam aspernatur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit voluptates ipsum, reiciendis quibusdam consequatur fugit accusantium ratione iusto! Nulla id sequi laudantium quas est minus necessitatibus, aperiam officiis recusandae vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequatur ipsam soluta dicta laboriosam et sit iste impedit mollitia commodi esse, officiis similique! Repudiandae suscipit doloribus veniam nam, alias blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, illo quis id vel voluptates aliquam voluptatibus vitae dolore nostrum distinctio. Ullam ipsa asperiores, corrupti maiores reprehenderit vitae deserunt id quis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente praesentium ea voluptatem labore facere tenetur qui, illo id unde saepe neque, perferendis nam excepturi, omnis ratione dolore doloremque quam aspernatur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit voluptates ipsum, reiciendis quibusdam consequatur fugit accusantium ratione iusto! Nulla id sequi laudantium quas est minus necessitatibus, aperiam officiis recusandae vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequatur ipsam soluta dicta laboriosam et sit iste impedit mollitia commodi esse, officiis similique! Repudiandae suscipit doloribus veniam nam, alias blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, illo quis id vel voluptates aliquam voluptatibus vitae dolore nostrum distinctio. Ullam ipsa asperiores, corrupti maiores reprehenderit vitae deserunt id quis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente praesentium ea voluptatem labore facere tenetur qui, illo id unde saepe neque, perferendis nam excepturi, omnis ratione dolore doloremque quam aspernatur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit voluptates ipsum, reiciendis quibusdam consequatur fugit accusantium ratione iusto! Nulla id sequi laudantium quas est minus necessitatibus, aperiam officiis recusandae vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequatur ipsam soluta dicta laboriosam et sit iste impedit mollitia commodi esse, officiis similique! Repudiandae suscipit doloribus veniam nam, alias blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, illo quis id vel voluptates aliquam voluptatibus vitae dolore nostrum distinctio. Ullam ipsa asperiores, corrupti maiores reprehenderit vitae deserunt id quis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente praesentium ea voluptatem labore facere tenetur qui, illo id unde saepe neque, perferendis nam excepturi, omnis ratione dolore doloremque quam aspernatur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit voluptates ipsum, reiciendis quibusdam consequatur fugit accusantium ratione iusto! Nulla id sequi laudantium quas est minus necessitatibus, aperiam officiis recusandae vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequatur ipsam soluta dicta laboriosam et sit iste impedit mollitia commodi esse, officiis similique! Repudiandae suscipit doloribus veniam nam, alias blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, illo quis id vel voluptates aliquam voluptatibus vitae dolore nostrum distinctio. Ullam ipsa asperiores, corrupti maiores reprehenderit vitae deserunt id quis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente praesentium ea voluptatem labore facere tenetur qui, illo id unde saepe neque, perferendis nam excepturi, omnis ratione dolore doloremque quam aspernatur?</p>
+
+    <!-- DETALHE: se colocado fora da ordem, por ser semântico, ela continua em sua devida posição na tabela -->
+    
+</body>
+<!--
+    ANATOMIA PARA TABELAS GRANDES
+
+    Table
+        Capition
+        THead
+            tr, td, th
+        TBody
+            tr, td, th
+        TFoot
+            tr, td, th
+-->
+</html>
