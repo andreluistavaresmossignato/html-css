@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+</head>
+<body>
+
+    <h1>Minha página</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, ad culpa aliquam velit iste aliquid reprehenderit repudiandae beatae sequi labore, asperiores aspernatur deleniti corporis facere totam incidunt quo tempore sed?</p>
+
+    <!-- Carregar scripts de outras pessoas pode ser perigoso, para isso vamos bloquear o script do pag005 aqui -->
+    <iframe src="paginas extras/pag005.html" referrerpolicy="no-referrer" sandbox="sandbox"></iframe>
+    <!-- o sandbox bloqueou os scripts do site pag005 -->
+
+    <!-- DICA: caso você DESCONFIE do site que você colocou no iframe, coloque o sandbox="sandbox" (não abra a porta para qualquer pessoa entrar)-->
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi nihil animi in? Quam, dolorem! Mollitia ipsa saepe laborum, iusto laboriosam consectetur quas quia sit, nostrum tenetur nemo hic similique praesentium.</p>
+    
+</body>
+</html>

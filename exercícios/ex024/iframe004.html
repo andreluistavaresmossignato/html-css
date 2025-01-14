@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <!-- Iframes costumam a ter problemas de segurança, por isso vamos aumentar a segurança! -->
+</head>
+<body>
+
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tempora perspiciatis, nostrum debitis fugiat vel quibusdam ratione culpa placeat error asperiores in. Dicta velit eligendi optio perspiciatis sed doloremque deserunt.</p>
+
+    <iframe src="paginas extras/pag004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer"> <!-- Explicação abaixo do body -->
+        Seu navegador não é compatível com isso!
+    </iframe>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tempora perspiciatis, nostrum debitis fugiat vel quibusdam ratione culpa placeat error asperiores in. Dicta velit eligendi optio perspiciatis sed doloremque deserunt.</p>
+    
+</body>
+    <!--
+     COMO DEIXAR O SITE MAIS SEGURO:
+
+     1- sandbox="sandbox" (segurança máxima) -> não informa a pessoas que invadem os sites, informações que as vezes podem ser muito importantes (exemplo prático no iframe005)
+
+        1.1- sandbox="allow-same-origin" (menos limitado ao anterior) -> permite a exposição de dados a outras páginas do própio site
+
+            1.1.1- sandbox="allow-same-origin allow-forms" -> Permite exposição de dados a formulários também 
+
+                1.1.1.1- sandbox="allow-same-origin allow-forms allow-scripts" -> Permite além de coisas da mesma origem e de formulários, permite também scripts
+     
+     2- referrerpolicy -> 
+
+        a. no-referrer-when-downgrade (menos segurança)-> é o padrão e permite o google e pessoas maliciosas capiturarem dados do usuário, para recomendar produtos
+
+        b. no-referrer (mais seguro) -> não permite os mecanismos recomendarem coisas ao seu usuário, de acordo com as ações e escolhas dele no site
+        
+        LEMBRANDO: Segurança e privacidade é algo fundamental, e caso algo do usuário seja exposto a outras pessoas, e reponsabilidade é TOTAL DO DESENVOLVEDOR DO SITE (no caso VOCÊ) da mesma forma que você não abre a porta para estranhos, você não coloca qualquer site dentro de um iframe, esses métodos de segurança NÃO protegem o usuário em 100% dos casos
+     -->
+</html>
