@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Meu primeiro formulário</h1>
+
+    <form action="cadatro.js" method="post" autocomplete="off"> <!-- form action faz o envio do formulário para no caso o "cadrastro.js" e o autocomplete off Retira sugestões chatas -->
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome"></p> <!-- Input text para textos -->
+        <p><label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p> <!-- Input de enviar, com o value sendo o resultado visual do botão -->
+    </form>
+    
+</body>
+    <!-- DOIS TIPOS DE METHOD:
+    1- GET (padrão) -> exibe os dados do formulário na url de busca (tira a segurança dependendo do dado informado), é usado em todos os sites de busca, como por exemplo:
+        a. Google
+        b. Youtube
+    OBS: o GET só pode ter até 3000 BYTES (3000 caracteres)
+
+    2- POST -> não exibe os dados do formulário na url do envio (pouquinho mais de privacidade), usado em logins de usuário e formulários com dados particulares
+    
+    Porém, NÃO ACHE QUE O POST TE DEIXA 100% SEGURO, no DevTools, é possível ver esses dados, para maior segurança é necessário se aprofundar em uma linguagem de programação e segurança criptografada com https
+    -->
+</html>
