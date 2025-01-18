@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de notas</title>
+</head>
+<body>
+
+    <h1>Provas alunos</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required>
+        </p>
+        <p>
+            <label for="imes">Período Letivo</label>
+            <input type="month" name="mes" id="imes" value="2025-01">
+        </p>
+        <p>
+            <label for="idia">Dia da prova</label>
+            <input type="date" name="dia" id="idia">
+        </p>
+        <p>
+            <label for="ihora">Horário da prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+    <!--
+     RECURSOS NOVOS DESSE EXERCÍCIO:
+    1- min e max (sem length): usado para mínimo de máximo de números a serem digitados
+    2- step: considera números decimais e uma sequência de números que pode ser digitado
+    3- value (para mês): coloca uma data pré-selecionada, podendo ser alterada
+     -->
+
+    <!--
+      TIPOS DE INPUT:
+     1- text: texto
+     2- number: número
+     3- month: mês e ano
+     4- date: data completa
+     5- time: horário
+     6- submit: enviar formulário
+     7- reset: limpa o formulário
+     8- password: senha
+    -->
+</html>
