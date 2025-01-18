@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de formulário</title>
+</head>
+<body>
+
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"> <!-- Usar o post para senhas -->
+        <p>
+            <label for="iusu">Usuário</label>
+            <input type="text" name="usu" id="iusu" required minlength="3" maxlength="30" size="30" placeholder="Digite o nome" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen" id="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="20" placeholder="Coloque sua senha" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> <!-- Limpa o formulário ao clicado -->
+        </p>
+    </form>
+    
+</body>
+    <!--
+        RECURSOS NOVOS DESSE EXERCÍCIO:
+    1- required: faz o campo ser obrigatório
+
+    2- minlength: o campo precisa ter pelo menos uma certa quantidade de dígitos
+
+    3- maxlength: o campo só pode ter até uma certa quantidade de dígitos
+
+    4- size: quantidade de letras que vão aparecer no campo sem rolagem lateral
+
+    5- placeholder: mostra um texto transparente no campo, como se fosse uma indicação do que preencher nele
+
+    6- autocomplete (no input): ao ligar o autocomplete no form, você pode dizer ao computador para que aquela caixa de texto serve
+    -->
+
+    <!--
+     TIPOS DE AUTOCOMPLETE:
+    1-  
+     -->
+</html>
