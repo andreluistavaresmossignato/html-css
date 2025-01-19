@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Estilo para impressoras */
+
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace; /* Fonte fácil de se ler em papel */
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+menu{
+    display: none; /* Não será exibido em versão impressa */
+}
+
+article{
+    width: 100%;
+}
+
+article::after{
+    content: "Esse artigo foi impresso atavés do site www.meusite.com/notícias";
+}
