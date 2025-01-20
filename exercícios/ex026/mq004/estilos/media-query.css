@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* PESQUISAR: Typical Device Breakpoints 
+Pequenas telas: até 600px
+Celular: de 600px até 768px 
+Tablet: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+/* MAIS ATUALIZADO, mas o de cima AINDA É O MAIS RECOMENDADO: 
+Dispositivos móveis: até 500px
+Tablets e telefones grandes: de 500px até 1200px
+Laptops e tablets horizontais: de 768 até 1400px
+Monitores externos grandes: 1400px
+Laptops e desktops grandes: acima de 1200px 
+*/
+
+/* Adaptação de celular já feito no style.css, usando o mobile first */
+
+@media print { /* IMPRESSÃO */
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(../imagens/back-print.jpg); /* desnecessario */
+    }
+
+    main{
+        border: 2px solid black;
+    }
+
+    main::after{
+        content: "Essa impressão foi feita através do site: www.meusite.com";
+        text-decoration: overline;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: block;}
+    img#pc{display: none;}
+    img#tv{display: none;}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone{display: none;}
+    img#tablet{display: block;} /* imagem do tablet ligada*/
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* DESKTOP */
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    h1{
+        font-size: 1.9em;
+    }
+
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: block;} /* imagem do pc ligada*/
+    img#tv{display: none;}
+    
+}
+
+@media screen and (min-width: 1200px) { /* TELAS GRANDES */
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main{
+        width: 850px;
+    }
+    h1{
+        font-size: 2em;
+    }
+
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: block;} /* imagem das telas maiores ligada*/
+
+}
