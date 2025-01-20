@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* PESQUISAR: Typical Device Breakpoints 
+Pequenas telas: até 600px
+Celular: de 600px até 768px 
+Tablet: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+/* Versão de menu para dispositivos menores já feito no style.css usando mobile first */
+
+@media screen and (min-width: 768px) {
+    span#burguer{
+        display: none; /* Hamburginho some com telas grandes */
+    }
+
+    menu{
+        display: block; /* Faz o menu aparecer sozinho com telas maiores */
+    }
+
+    menu > ul > li{
+        display: inline-block;
+    }
+
+    main{
+        width: 768px;
+    }
+}

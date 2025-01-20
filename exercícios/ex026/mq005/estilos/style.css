@@ -37,7 +37,7 @@ span#burguer:hover{
 }
 
 menu{
-    display: none;
+    display: none; /* Deixando o menu por padrão desligado (para com o JS, quando clicar, aí sim ativar o display)*/
 }
 
 menu > ul{

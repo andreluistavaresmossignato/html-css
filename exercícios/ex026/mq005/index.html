@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <!-- Chamando o link do google icons para coloca ícones -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="mudoutamanho()"> <!-- Quando o tamanho mudar no body, ativa essa função -->
 
     <header>
         <h1>Meu site</h1>
+        <!-- Menu hamburginho do google icons, com um script para quando clicar nele mostrar o menu -->
         <span id="burguer" class="material-icons" onclick="clickmenu()">
             menu
         </span>
@@ -41,6 +44,17 @@
     </main>
 
     <script>
+
+        // Corrigindo problema encontrado no menu
+        function mudoutamanho(){
+            if(window.innerWidth >= 768){ // verifica se a tela é maior que esse valor de 768
+                itens.style.display = 'block'
+            }
+
+            else{
+                itens.style.display = 'none'
+            }
+        }
 
         function clickmenu(){
             if(itens.style.display == 'block'){
