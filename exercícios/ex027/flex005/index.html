@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box centralizado</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightsalmon;
+        }
+
+        main{
+            background-color: lightgreen;
+            height: 400px;
+            width: 100vw;
+
+            /* Essas configurações fazem o item ser centralizado no meio exato da área verde */
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section{
+            background-color: lightseagreen;
+            height: 200px;
+            width: 200px;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section>
+            <form action="cadastro.php">
+                <h1>Tela de Login</h1>
+                <label for="inome">Usuário</label> <input type="text" name="nome" id="inome">
+                <label for="isenha">Senha</label> <input type="password" name="senha" id="isenha">
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
