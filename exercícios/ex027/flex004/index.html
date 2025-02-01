@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+
+        div.container{
+            background-color: lightsalmon;
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center; /* é relativo ao main-axis */ 
+            align-items: center; /* é relativo ao cross-axis */
+
+            /* (ver explicação abaixo do body) */
+        }
+
+        div.item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    
+</body>
+
+<!-- tipos de justify-content:
+    1- flex-start -> espaço em branco ao final do eixo principal
+    2- flex-end -> espaço em branco no main-start
+    3- center -> calcula o centro do container com os itens e os espaços serão distribuídos entre o main-start e o main-end
+    4- space-between -> cola primeiro e último elemento no main-start e main-end e distribui igualmente os espaços no main-axis
+    5- space-elenly -> mesmo espaçamento entre os elementos (incluindo o primeiro e o último)
+    6- space-around -> separa primeiro os espaços igualmente e coloca os elementos centralizados a cada espaço respectivamente
+
+    (3 a 6 são os mais importantes)
+
+
+    ATENÇÃO: usar justify-content: flex-end NÃO É MESMA COISA que usar row-reverse!
+
+    DICA: faça os testes nesse exercício flex004 index para entender melhores esses conceitos!
+-->
+
+<!-- tipos de align-items:
+    1- stretch -> distanciamento entre o cross-start e o cross-end
+    2- flex-start -> espaçamento vazio abaixo dos itens no cross-end (cola no cross-start)
+    3- flex-end -> espaçamento vazio acima dos itens no cross-start (cola no cross-end)
+    4- center -> distribui os espaçamentos do cross-start e o cross-end igualmente (alinhando os itens verticalmente)
+-->
+</html>
