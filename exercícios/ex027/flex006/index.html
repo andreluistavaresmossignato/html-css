@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+
+        div.container{
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-evenly;
+            height: 400px;
+        }
+
+        div.item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    
+</body>
+<!-- Tipos de Align-Content:
+    1- stretch (padrão): divide o container em partes iguais (espaços) no cross-axis e colocar os elementos nesses espaços, e faze-los expixar para ocupar a parte inteira do espaço
+
+    2- flex-start: deixa um espaço vazio no cross-end do cross-axis
+
+    3- flex-end: deixa um espaço vazio no cross-start do cross-axis
+
+    4- center: deixa espaços em branco no cross-start e no cross-end e centraliza os itens no cross-axis
+
+    5- space-between: coloca os primeiros items no cross-start e os últimos no cross-end e vai colocando mais ao centro os outros elementos (se existirem, senão fica um espaço vazio no centro do cross-axis)
+
+    6- space-evenly: espaçamentos iguais entre os elementos no cross-axis
+
+    7- space-around: parecido ao strech, mas ao invés de os elementos expixarem, eles ficam centralizados aos espaços
+-->
+</html>
