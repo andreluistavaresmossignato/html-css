@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+
+        div.container{
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    
+</body>
+<!-- 
+    Controle de tamanhos em itens flexíveis:
+    1- flex-shrink -> encolhe o item, sendo 0 = não pode encolher e 1 = pode encolher (padrão = 1)
+    2- flex-grow -> cresce o item, sendo 0 = não pode crescer e 1 = pode crescer (padrão = 0)
+
+    item super-flexível -> flex-shrink = 1 e flex-grow = 1
+-->
+</html>
